@@ -1,0 +1,59 @@
+.sideBar {
+    position: sticky;
+    top: 0;
+    flex: 20%;
+    height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    z-index: 1;
+    padding: 2rem 1rem 2rem 2rem;
+    background: #eef1f4;
+    box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+    overflow: hidden;
+}
+
+.sideBar nav {
+    margin-top: 6rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.sideBar nav div {
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.sideBar nav div a:hover {
+    background: #dae0e6;
+    border-radius: 22px;
+    /* transform: translateX(1.5rem); */
+}
+
+.sideBar nav div a {
+    font-size: 1.7rem;
+    text-transform: capitalize;
+    color: #494d4c;
+    padding: 1rem 1.8rem;
+    border: 1px solid transparent;
+    display: flex;
+    align-items: center;
+}
+
+.sideBar nav div a svg {
+    margin-right: 1.5rem;
+    font-size: 2rem;
+}
+
+.active {
+    background: #ffb0aa;
+    border-radius: 22px;
+    color: #001d35 !important;
+    /* transform: translateX(1.5rem); */
+}

@@ -1,0 +1,47 @@
+.homeSection {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 4rem;
+}
+
+.homeSection div {
+    width: 100%;
+}
+
+.homeSection div h1 {
+    font-size: 2.4rem;
+    color: #444;
+}
+
+.homeSection div hr {
+    width: 100%;
+    background: #ddd;
+    color: #3d3d3d;
+    height: 2px;
+    margin: 2rem 0;
+}
+
+.homeSection article {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.homeSection article p {
+    flex: 1 1 40rem;
+    color: #5a5a5a;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+}
+
+.homeSection article img {
+    flex: 1 1 30rem;
+    object-fit: cover;
+    border-radius: 12px;
+}
