@@ -5,6 +5,9 @@
 
 body {
   background: #fff;
+  max-width: 800px;
+  display: flex;
+  align-items: center;
 }
 
 .container {

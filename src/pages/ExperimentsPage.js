@@ -1,5 +1,9 @@
+import ExperimentsList from "../components/ExperimentsList/ExperimentsList";
+
 const ExperimentsPage = () => {
-    return (<p> ExperimentsPage</p>);
+    return (<div className="container">
+        <ExperimentsList />
+    </div>);
 }
 
 export default ExperimentsPage;

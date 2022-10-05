@@ -1,0 +1,9 @@
+.experimentsList {
+    width: 100%;
+    padding: 3rem 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+}

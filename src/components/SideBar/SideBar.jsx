@@ -6,8 +6,8 @@ const items = [
   { name: "home", to: "/", icon: <AiTwotoneHome /> },
   { name: "material api", to: "material" , icon: <AiFillSignal />},
   { name: "proposals", to: "proposals" , icon: <AiTwotoneHome />},
-  { name: "extermrnts", to: "extermrnts" , icon: <AiTwotoneHome />},
-  { name: "reservstion", to: "reservstion" , icon: <AiTwotoneHome />},
+  { name: "experiments", to: "experiments" , icon: <AiTwotoneHome />},
+  { name: "reservstion", to: "reservation" , icon: <AiTwotoneHome />},
   { name: "about us", to: "about-us", icon: <AiOutlineUser /> },
 ];
 

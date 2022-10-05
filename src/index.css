@@ -10,3 +10,7 @@
   font-size: 63.5%;
   transition: all ease-in-out .3s;
 }
+
+#root {
+  max-width: 1500px;
+}
