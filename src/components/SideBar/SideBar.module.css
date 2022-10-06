@@ -38,6 +38,7 @@
 
 .sideBar nav div a {
     font-size: 1.7rem;
+    font-weight: 600;
     text-transform: capitalize;
     color: #494d4c;
     padding: 1rem 1.8rem;

@@ -1,6 +1,6 @@
 .resrvContainer {
     width: 100%;
-    padding: 3rem 10rem;
+    padding: 3rem 15rem;
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -38,7 +38,17 @@
     background: #4B4D50;
 }
 
+.labelContainer {
+ width: 100%;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ color: #A73730;   
+ font-size: 1.4rem;
+}
+
 .formRow label,
+.labelContainer label,
 .formRowCheckBox label,
 .formRowFile p {
     font-size: 14px;

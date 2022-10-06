@@ -7,6 +7,7 @@ import ExperimentsPage from "./pages/ExperimentsPage"
 import LoginPage from "./pages/LoginPage"
 import LaboratoryDatePage from "./pages/LaboratoryDatePage"
 import ReservPage from "./pages/ReservPage"
+import DescreaptionPage from "./pages/DescreaptionPage"
 
 
 const routes = [
@@ -18,6 +19,7 @@ const routes = [
     { path: "/reservation/:id", element: <LaboratoryDatePage /> },
     { path: "/reservation/:id/reserv", element: <ReservPage /> },
     { path: "/experiments", element: <ExperimentsPage /> },
+    { path: "/experiments/descreaption", element: <DescreaptionPage /> },
     { path: "/", element: <HomePage /> },
 ]
 

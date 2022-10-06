@@ -2,12 +2,13 @@ import { useFormik } from "formik";
 import Input from "../common/Input/Inpu";
 import * as yup from "yup";
 import style from "./SignUp.module.css";
-import { AiOutlineMail } from "react-icons/ai";
+import { AiOutlineUser } from "react-icons/ai";
+import { registerUser } from "../../Services/registerUserService";
 
 const initialValues = {
   email: "",
   password: "",
-  username:""
+  full_name: "",
 };
 
 const validationSchema = yup.object({
@@ -16,12 +17,18 @@ const validationSchema = yup.object({
     .email("Email is not valid.")
     .required("Email is required."),
   password: yup.string().required("Password is required."),
-  username:yup.string().required("username is required")
+  full_name: yup.string().required("username is required"),
 });
 
 const Signup = () => {
-  const onSubmit = async (values) => {
-    console.log(values);
+  const onSubmit = async (formDate) => {
+    console.log(formDate);
+    try {
+      const res = await registerUser(formDate);
+      console.log(res);
+    } catch (error) {
+      console.error("error",error);
+    }
   };
 
   const formik = useFormik({
@@ -35,25 +42,25 @@ const Signup = () => {
     <form className={style.form} onSubmit={formik.handleSubmit}>
       <h3>Creat acount</h3>
       <Input
-        name="username"
+        name="full_name"
         label="username"
         formik={formik}
         type="text"
-        icon="&#61475;"
+        icon={<AiOutlineUser />}
       />
       <Input
         name="email"
         label="email"
         formik={formik}
         type="email"
-        icon="&#61475;"
+        icon={<AiOutlineUser />}
       />
       <Input
         name="password"
         label="password"
         formik={formik}
         type="password"
-        icon="&#61475;"
+        icon={<AiOutlineUser />}
       />
       <button
         className={style.formBtn}

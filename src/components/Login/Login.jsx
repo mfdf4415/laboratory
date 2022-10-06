@@ -2,6 +2,7 @@ import { useFormik } from "formik";
 import Input from "../common/Input/Inpu";
 import * as yup from "yup";
 import style from "./Login.module.css";
+import { AiOutlineUser } from "react-icons/ai";
 
 const initialValues = {
   email: "",
@@ -36,14 +37,14 @@ const Login = () => {
         label="email"
         formik={formik}
         type="email"
-        icon="&#61475;"
+        icon={<AiOutlineUser />}
       />
       <Input
         name="password"
         label="password"
         formik={formik}
         type="password"
-        icon="&#61475;"
+        icon={<AiOutlineUser />}
       />
       <button
         disabled={!formik.isValid}
