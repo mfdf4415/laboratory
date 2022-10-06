@@ -16,7 +16,10 @@ const validationSchema = yup.object({
     .string()
     .email("Email is not valid.")
     .required("Email is required."),
-  password: yup.string().required("Password is required."),
+  password: yup.string()
+    .required("No password provided.")
+    .min(8, "Password is too short - should be 8 chars minimum.")
+    .matches(/[a-zA-Z][0-9]/, "Password can only contain Latin letters."),
   full_name: yup.string().required("username is required"),
 });
 
@@ -27,7 +30,7 @@ const Signup = () => {
       const res = await registerUser(formDate);
       console.log(res);
     } catch (error) {
-      console.error("error",error);
+      console.error("error", error);
     }
   };
 
