@@ -7,21 +7,16 @@
     padding: 4rem;
 }
 
-.homeSection div {
+.experimentsListHeader {
     width: 100%;
+    border-bottom: 1px dashed #860303;
+    padding-bottom: 2rem;
+    margin-bottom: 4rem;
 }
 
-.homeSection div h1 {
+.experimentsListHeader h1 {
     font-size: 2.4rem;
-    color: #444;
-}
-
-.homeSection div hr {
-    width: 100%;
-    background: #ddd;
-    color: #3d3d3d;
-    height: 2px;
-    margin: 2rem 0;
+    color: #000;
 }
 
 .homeSection article {
@@ -35,7 +30,7 @@
 
 .homeSection article p {
     flex: 1 1 40rem;
-    color: #5a5a5a;
+    color: #000;
     font-size: 1.6rem;
     line-height: 2.4rem;
 }

@@ -1,0 +1,111 @@
+.showExperimentContainer {
+    width: 100%;
+    padding: 3rem 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;
+}
+
+.showTop {
+    width: 100%;
+    background: #e7e7e9;
+    border-radius: 10px;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.showTop h3 {
+    font-size: 1.7rem;
+    color: #000;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.showTop p {
+    color: #000;
+    font-size: 1.4rem;
+}
+
+.showImg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20rem;
+    padding: 0 4rem;
+    width: 100%;
+}
+
+.imgContainer {
+    padding: 1rem;
+    border: 1px dashed #C0C0C0;
+    border-radius: 10px;
+    width: 100%;
+    height: 23rem;
+    overflow: hidden;
+    flex:  1 1 25rem;
+}
+
+.imgContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.alertContainer {
+    padding: 10rem 15rem;
+    width: 100%;
+
+}
+
+.loading {
+    color: #555;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.error {
+    font-size: 1.8rem;
+    color: red;
+    text-align: center;
+    background: rgb(255, 240, 240);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid red;
+    line-height: 3rem;
+
+}
+
+@media only screen and (max-width: 500px) {
+
+    .showExperimentContainer {
+        padding: 5rem 3rem;
+
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+
+    .showExperimentContainer {
+        padding: 3rem 10rem;
+
+    }
+
+    .showImg {
+        gap: 5rem;
+    }
+
+}
+
+@media only screen and (max-width: 740px) {
+
+    .showExperimentContainer {
+        padding: 6rem 2rem;
+
+    }
+
+}

@@ -1,0 +1,52 @@
+.homeSection {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 4rem 15rem;
+}
+
+.experimentsListHeader {
+    width: 100%;
+    border-bottom: 1px dashed #860303;
+    padding-bottom: 2rem;
+    margin-bottom: 4rem;
+}
+
+.experimentsListHeader h1 {
+    font-size: 2.4rem;
+    color: #000;
+}
+
+.homeSection div {
+    width: 100%;
+}
+
+.homeSection article {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.homeSection article p {
+    color: #000;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    cursor: pointer;
+}
+
+article hr {
+    width: 100%;
+    height: 1px;
+    background: #e7e7e9;
+}
+
+@media only screen and (max-width: 740px) {
+    .homeSection {
+        padding: 6rem 4rem;
+    }
+}

@@ -1,0 +1,30 @@
+.showMenu {
+    width: 100%;
+    background: #eef1f4;
+    margin-top: 6rem;
+    position: fixed;
+    padding: .5rem;
+    z-index:3;
+    display: none;
+    margin-bottom: 5rem;
+}
+
+.showMenu div {
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: flex-start;
+font-size: 1.6rem;
+cursor: pointer;
+}
+
+.showMenu div svg {
+    font-size: 2rem;
+    margin-right: .5rem;
+}
+
+@media only screen and (max-width: 740px) {
+    .showMenu {
+        display: block;
+    }
+}

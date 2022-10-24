@@ -1,12 +1,10 @@
-import img from "../../img/packing_#.jpg"
-import style from "./HomePageContent.module.css"
-
+import img from "../../img/packing_#.jpg";
+import style from "./HomePageContent.module.css";
 const HomePageContent = () => {
   return (
     <section className={style.homeSection}>
-      <div>
-        <h1>Title of Home</h1>
-        <hr />
+      <div className={style.experimentsListHeader}>
+        <h1>Home page</h1>
       </div>
       <article>
         <p>

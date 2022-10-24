@@ -1,36 +1,76 @@
+import { useNavigate } from "react-router-dom";
 import img from "../../img/packing_#.jpg";
+import { truncate } from "../../utils/truncate";
 import style from "./ProposalPageContent.module.css";
 
-const ProposalPageContent = () => {
-  return (
-    <section className={style.homeSection}>
-      <div>
-        <h1>
-          Title of Proposal
-        </h1>
-        <hr />
-      </div>
-      <article>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores
+const items = [
+  {
+    text: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores
           nesciunt enim iste provident aliquam? Odio eos repellat ut rerum. Ab
-          odio dolores deserunt vel ex quam enim nisi officiis nostrum.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque velit
+          odio dolores deserunt vel ex quam enim nisi officiis nostrum. Lorem
+          ipsum dolor sit amet consectetur adipisicing elit. Atque velit
           voluptatem recusandae ratione illo adipisci modi doloremque pariatur
           voluptate dolorum sapiente corrupti dolores officia ab, hic vel
-          placeat omnis nostrum.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
-          ipsum maxime et doloremque voluptatum officia numquam nobis minima
-          molestias, consectetur quibusdam ut libero illum reiciendis soluta
-          vero nemo possimus magnam!
-        </p>
-        <hr/>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero eos
-          tempora exercitationem, ipsum veritatis odit veniam consequuntur
-          tenetur magnam sequi consequatur similique soluta ex mollitia numquam,
-          perferendis facilis molestias cum?
-        </p>
+          placeat omnis nostrum. Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Cupiditate ipsum maxime et doloremque voluptatum
+          officia numquam nobis minima molestias, consectetur quibusdam ut
+          libero illum reiciendis soluta vero nemo possimus magnam`,
+    id: 0,
+  },
+  {
+    text: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores
+          nesciunt enim iste provident aliquam? Odio eos repellat ut rerum. Ab
+          odio dolores deserunt vel ex quam enim nisi officiis nostrum. Lorem
+          ipsum dolor sit amet consectetur adipisicing elit. Atque velit
+          voluptatem recusandae ratione illo adipisci modi doloremque pariatur
+          voluptate dolorum sapiente corrupti dolores officia ab, hic vel
+          placeat omnis nostrum. Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Cupiditate ipsum maxime et doloremque voluptatum
+          officia numquam nobis minima molestias, consectetur quibusdam ut
+          libero illum reiciendis soluta vero nemo possimus magnam`,
+    id: 1,
+  },
+  {
+    text: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores
+          nesciunt enim iste provident aliquam? Odio eos repellat ut rerum. Ab
+          odio dolores deserunt vel ex quam enim nisi officiis nostrum. Lorem
+          ipsum dolor sit amet consectetur adipisicing elit. Atque velit
+          voluptatem recusandae ratione illo adipisci modi doloremque pariatur
+          voluptate dolorum sapiente corrupti dolores officia ab, hic vel
+          placeat omnis nostrum. Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Cupiditate ipsum maxime et doloremque voluptatum
+          officia numquam nobis minima molestias, consectetur quibusdam ut
+          libero illum reiciendis soluta vero nemo possimus magnam`,
+    id: 2,
+  },
+];
+
+const ProposalPageContent = () => {
+  const navigate = useNavigate();
+
+  return (
+    <section className={style.homeSection}>
+      <div className={style.experimentsListHeader}>
+        <h1>Proposals</h1>
+      </div>
+      <article>
+        {items.map((item) => (
+          <>
+            <p
+              key={item.id}
+              onClick={() =>
+                navigate(`/proposals/${item.id}`, {
+                  state: {
+                    text: item.text,
+                  },
+                })
+              }
+            >
+              {truncate(item.text, 500)}
+            </p>
+            <hr key={item.id} />
+          </>
+        ))}
       </article>
     </section>
   );

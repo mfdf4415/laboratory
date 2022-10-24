@@ -1,4 +1,3 @@
-import ContentWrapper from "../components/hoc/ContentWrapper";
 import HomePageContent from "../components/HomePageContent/HomePageContent";
 
 const HomePage = () => {

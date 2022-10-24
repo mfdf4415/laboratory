@@ -1,12 +1,10 @@
-import img from "../../img/packing_#.jpg"
-import style from "./AboutUsPageContent.module.css"
+import style from "./AboutUsPageContent.module.css";
 
 const AboutUsPageContent = () => {
   return (
     <section className={style.homeSection}>
-      <div>
-        <h1>Title of Home</h1>
-        <hr />
+      <div className={style.experimentsListHeader}>
+        <h1>About us</h1>
       </div>
       <article>
         <p>
@@ -24,7 +22,7 @@ const AboutUsPageContent = () => {
           molestias, consectetur quibusdam ut libero illum reiciendis soluta
           vero nemo possimus magnam!
         </p>
-        <img src={img} alt="" />
+        <img src="" alt="" />
       </article>
     </section>
   );

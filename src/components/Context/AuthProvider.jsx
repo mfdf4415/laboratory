@@ -12,7 +12,8 @@ const AuthProvider = ({ children }) => {
   const [state, setState] = useState(false);
 
   useEffect(() => {
-    const userData = localStorage.getItem(LOCAL_STORAGE_AUTH_KEY) || false;
+    const userData =
+      JSON.parse(localStorage.getItem(LOCAL_STORAGE_AUTH_KEY)) || false;
     setState(userData);
   }, []);
 
@@ -20,6 +21,20 @@ const AuthProvider = ({ children }) => {
     const data = JSON.stringify(state);
     localStorage.setItem(LOCAL_STORAGE_AUTH_KEY, data);
   }, [state]);
+
+  // setState(
+  //   ({
+  //     user: {
+  //       id: 15,
+  //       full_name: "MF",
+  //       email: "mohammaderror419@gmail.com",
+  //     },
+  //     ["access token"]: {
+  //       token: "108|iWs71WFzuzlUROM4DhnSvPszD6AxnFbwlcOOrhe3",
+  //       ["device name"]: "m laptop",
+  //     },
+  //   })
+  // );
 
   return (
     <AuthProviderContext.Provider value={state}>

@@ -1,14 +1,14 @@
 .header {
     width: 100%;
     background: #a73730;
-    padding: 1.5rem 8rem 1.5rem 3rem;
+    padding: 1.5rem 3rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
     position: fixed;
     top: 0;
-    z-index: 2;
+    z-index: 3;
 }
 
 .header .logo a {
@@ -24,9 +24,11 @@
     font-weight: 600;
 }
 
-.header .headerLogin a {
+.headerLogin a,
+.headerLogin span {
     font-size: 1.6rem;
     color: #fff;
+    cursor: pointer;
 }
 
 .headerLogin svg {

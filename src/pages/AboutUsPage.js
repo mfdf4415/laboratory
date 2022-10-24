@@ -4,4 +4,5 @@ const AboutUsPage = () => {
     return (<div className="container"><AboutUsPageContent /></div>);
 }
 
+
 export default AboutUsPage;

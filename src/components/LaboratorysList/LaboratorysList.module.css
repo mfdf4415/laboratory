@@ -6,6 +6,31 @@
     justify-content: center;
     flex-direction: column;
     gap: 2rem;
+    position: relative;
+}
+
+.alertContainer {
+    padding: 10rem 15rem;
+    width: 100%;
+
+}
+
+.loading {
+    color: #555;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.error {
+    font-size: 1.8rem;
+    color: red;
+    text-align: center;
+    background: rgb(255, 240, 240);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid red;
+    line-height: 3rem;
+
 }
 
 .listTitle {
@@ -38,4 +63,12 @@
     padding: 1rem;
     border-radius: 10px;
     text-transform: capitalize;
+}
+
+@media only screen and (max-width: 740px) {
+
+    .laboratorysList {
+        padding: 4rem;
+
+    }
 }
