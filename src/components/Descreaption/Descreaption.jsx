@@ -149,11 +149,11 @@ const Descreaption = () => {
             <div className={style.formRowImg}>
               <div className={style.imgContainer}>
                 <input type="file" onChange={(e) => uploadImgHandler(e)} />
-                {images[0] && <img src={URL.createObjectURL(images[0])} /> }
+                {images[0] && <img src={URL.createObjectURL(images[0])} alt="expriment photo"/> }
               </div>
               <div className={style.imgContainer}>
                 <input type="file" onChange={(e) => uploadImgHandler(e)} />
-                {images[1] && <img src={URL.createObjectURL(images[1])} /> }
+                {images[1] && <img src={URL.createObjectURL(images[1])} alt="expriment photo"/> }
               </div>
             </div>
             <button type="dubmits">Send</button>
