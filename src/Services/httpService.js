@@ -1,5 +1,4 @@
 import axios from "axios"
-import {logoutService} from "./logoutService"
 
 axios.defaults.baseURL = "https://api.laboratoryappointment.de/v1"
 const localToken = JSON.parse(localStorage.getItem("authState")) || false
@@ -13,7 +12,8 @@ axios.interceptors.request.use(config => {
 axios.interceptors.response.use(response => {
     return response;
 }, error => {
-    if (error.response.status === 401) {
+    if (error.response.status === 401 && !window.location.href.endsWith("/login")) {
+        console.log(window.location.href)
         alert("You are not authorized, You must first login to yor acount");
         window.location.href = "/login"
     }

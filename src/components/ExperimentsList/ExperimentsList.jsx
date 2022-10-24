@@ -93,6 +93,7 @@ const ExperimentsList = () => {
                 <div className={style.experimentBottom}>
                   <p>
                     {timeStampToDate(expr["start date-time"] * 1000)}
+                    {" - "}
                     {timeStampToDate(expr["end date-time"] * 1000)}
                   </p>
                   <AiOutlineDelete onClick={(e) => deleteHandler(e, expr.id)} />
@@ -104,7 +105,7 @@ const ExperimentsList = () => {
       );
     }
 
-    if (experiments && experiments.message.code == "S051" && !error) {
+    if (experiments && experiments.message.code === "S051" && !error) {
       renderd = (
         <section className={style.experimentsList}>
           <div className={style.experimenstListHeader}>

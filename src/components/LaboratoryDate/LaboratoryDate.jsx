@@ -5,8 +5,6 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { getListOfSpecificLabs } from "../../Services/getListOfSpecificLabs";
 import { timeStampEcope } from "../../utils/timeStampEcope";
-import { getCsrfToken } from "../../Services/getCsrfToken";
-import { isValidElement } from "react";
 
 const default_reserve_hours = [8, 9, 10, 11, 12, 13, 14, 15];
 
@@ -31,10 +29,11 @@ const LaboratoryDate = () => {
 
   const handelNavigate = (date, startHour) => {
     const newDate = new Date(date.setMinutes(0));
+    const finalDate = new Date(newDate.setSeconds(3))
     navigate(`/reservation/${params.id}/reserv`, {
       state: {
-        start_at: timeStampEcope(newDate.setHours(startHour)),
-        end_at: timeStampEcope(newDate.setHours(startHour + 1)),
+        start_at: timeStampEcope(finalDate.setHours(startHour)),
+        end_at: timeStampEcope(finalDate.setHours(startHour + 1)),
       },
     });
   };

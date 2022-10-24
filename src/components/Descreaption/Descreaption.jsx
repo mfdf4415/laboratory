@@ -98,13 +98,11 @@ const Descreaption = () => {
             <div className={style.formRowImg}>
               <div className={style.imgContainer}>
                 <input type="file" onChange={(e) => uploadImgHandler(e)} />
-                {/* <AiOutlinePlus onClick={uploadImgHandler} /> */}
-                {images[0] ? <img src={URL.createObjectURL(images[0])} /> : ""}
+                {images[0] && <img src={URL.createObjectURL(images[0])} alt="experiment photo" />}
               </div>
               <div className={style.imgContainer}>
                 <input type="file" onChange={(e) => uploadImgHandler(e)} />
-                {/* <AiOutlinePlus onClick={uploadImgHandler} /> */}
-                {images[1] ? <img src={URL.createObjectURL(images[1])} /> : ""}
+                {images[1] && <img src={URL.createObjectURL(images[1])} alt="experiment photo" />}
               </div>
             </div>
             <button type="dubmits">Send</button>
@@ -151,13 +149,11 @@ const Descreaption = () => {
             <div className={style.formRowImg}>
               <div className={style.imgContainer}>
                 <input type="file" onChange={(e) => uploadImgHandler(e)} />
-                {/* <AiOutlinePlus onClick={uploadImgHandler} /> */}
-                {images[0] ? <img src={URL.createObjectURL(images[0])} /> : ""}
+                {images[0] && <img src={URL.createObjectURL(images[0])} /> }
               </div>
               <div className={style.imgContainer}>
                 <input type="file" onChange={(e) => uploadImgHandler(e)} />
-                {/* <AiOutlinePlus onClick={uploadImgHandler} /> */}
-                {images[1] ? <img src={URL.createObjectURL(images[1])} /> : ""}
+                {images[1] && <img src={URL.createObjectURL(images[1])} /> }
               </div>
             </div>
             <button type="dubmits">Send</button>

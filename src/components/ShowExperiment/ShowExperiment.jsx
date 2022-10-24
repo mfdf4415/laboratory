@@ -42,8 +42,7 @@ const ShowExperiment = () => {
         )
       );
       photo = `data:;base64, ${base64}`;
-    } catch (error) {
-    }
+    } catch (error) {}
 
     return photo;
   };
@@ -90,12 +89,16 @@ const ShowExperiment = () => {
             <p>{showExperiment.data.experiment.dascription}</p>
           </div>
           <div className={style.showImg}>
-            <div className={style.imgContainer}>
-              <img src={images.image1} />
-            </div>
-            <div className={style.imgContainer}>
-              <img src={images.image2} />
-            </div>
+            {images.image1 && (
+              <div className={style.imgContainer}>
+                <img src={images.image1} />
+              </div>
+            )}
+            {images.image2 && (
+              <div className={style.imgContainer}>
+                <img src={images.image2} />
+              </div>
+            )}
           </div>
         </div>
       );

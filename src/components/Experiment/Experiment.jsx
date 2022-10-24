@@ -4,7 +4,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { getListOfExperiment } from "../../Services/getListOfExperiment";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
-import { AiOutlineDelete, AiOutlineEdit, AiOutlinePlus } from "react-icons/ai";
+import { AiOutlineDelete,  AiOutlinePlus } from "react-icons/ai";
 import { deleteExperiment } from "../../Services/deleteExperiment";
 import { truncate } from "../../utils/truncate";
 import Loading from "../common/Loading/Loading";
@@ -140,7 +140,7 @@ const Experiment = () => {
       );
     }
 
-    if (experiment && experiment.message.code == "S051" && !error) {
+    if (experiment && experiment.message.code === "S051" && !error) {
       renderd = (
         <section className={style.experimentList}>
           <div className={style.experimentListHeader}>

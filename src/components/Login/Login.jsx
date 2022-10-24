@@ -2,26 +2,14 @@ import { useFormik } from "formik";
 import Input from "../common/Input/Inpu";
 import * as yup from "yup";
 import style from "./Login.module.css";
-import { AiOutlineUser } from "react-icons/ai";
+import { AiOutlineLock, AiOutlineMail } from "react-icons/ai";
 import { loginUser } from "../../Services/loginUser";
-import { useAuthActions, useAuth } from "../Context/AuthProvider";
+import { useAuthActions } from "../Context/AuthProvider";
 import { toast } from "react-toastify";
-import { getCsrfToken } from "../../Services/getCsrfToken";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import Loading from "../common/Loading/Loading";
-
-const h = {
-  user: {
-    id: 15,
-    full_name: "MF",
-    email: "mohammaderror419@gmail.com",
-  },
-  ["access token"]: {
-    token: "195|6cttbRdrpWn8Q4hol1jTIBvpKzpUayWF24KyetlJ",
-    ["device name"]: "macOS",
-  },
-};
+import _ from "lodash";
 
 const initialValues = {
   email: "",
@@ -69,15 +57,24 @@ const Login = () => {
     try {
       const res = await loginUser(formData);
       setLoading(false);
-      setAuth(res.data.data);
-      if (res.data.status >= 400) {
-        setError({ show: true, text: res.data.message.text });
+
+      const successMessageCode = _.get(res, 'data.message.code', -1)
+      const failMessageCode = _.get(res, 'response.data.message.code', -1)
+
+      console.log("success", successMessageCode)
+      console.log("failure", failMessageCode)
+
+      if (failMessageCode != -1) {
+        setError({ show: true, text: res.response.data.message.text });
+      } else if (successMessageCode == 'S212') {
+        setAuth(res.data.data);
+        toast.success(res.data.message.text);
+        navigate("/experiments");
+        window.location.reload();
       }
-      toast.success(res.data.message.text);
-      navigate("/experiments");
-      window.location.reload()
     } catch (error) {
       setLoading(false);
+      console.error("login error", error);
     }
   };
 
@@ -95,12 +92,10 @@ const Login = () => {
       renderd = (
         <>
           <Loading />
-          {error.show ? (
+          {error.show && (
             <div className={style.errAlert}>
               <p>{error.text}</p>
             </div>
-          ) : (
-            ""
           )}
           <form className={style.form} onSubmit={formik.handleSubmit}>
             <h3>login</h3>
@@ -109,14 +104,14 @@ const Login = () => {
               label="email"
               formik={formik}
               type="email"
-              icon={<AiOutlineUser />}
+              icon={<AiOutlineMail />}
             />
             <Input
               name="password"
               label="password"
               formik={formik}
               type="password"
-              icon={<AiOutlineUser />}
+              icon={<AiOutlineLock />}
             />
             <button
               disabled={!formik.isValid}
@@ -133,12 +128,10 @@ const Login = () => {
     if (!loading) {
       renderd = (
         <>
-          {error.show ? (
+          {error.show && (
             <div className={style.errAlert}>
               <p>{error.text}</p>
             </div>
-          ) : (
-            ""
           )}
           <form className={style.form} onSubmit={formik.handleSubmit}>
             <h3>login</h3>
@@ -147,14 +140,14 @@ const Login = () => {
               label="email"
               formik={formik}
               type="email"
-              icon={<AiOutlineUser />}
+              icon={<AiOutlineMail />}
             />
             <Input
               name="password"
               label="password"
               formik={formik}
               type="password"
-              icon={<AiOutlineUser />}
+              icon={<AiOutlineLock />}
             />
             <button
               disabled={!formik.isValid}

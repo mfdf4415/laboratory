@@ -5,7 +5,6 @@ import style from "./Layout.module.css"
 import { useState } from "react"
 const Layout = ({ children }) => {
     const [show, setShow] = useState(false)
-console.log("ahsdgjsgdhfhjasdgfh")
     return (
         <>
             <Header />
