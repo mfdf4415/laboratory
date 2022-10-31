@@ -1,0 +1,28 @@
+const proposals = [
+    {
+        text: `The oldest rocks are 2.7 billion years old and are found in Ireland, Wales and the northwest of Scotland.[12] During the Silurian period, the north-western regions collided with the south-east, which had been part of a separate continental landmass. The topography of the islands is modest in scale by global standards. Ben Nevis, the highest mountain, rises to only 1,345 metres (4,413 ft),[6] and Lough Neagh, which is notably larger than other lakes in the island group, covers 390 square kilometres (151 sq mi). The climate is temperate marine, with cool winters and warm summers. The North Atlantic drift brings significant moisture and raises temperatures 11 °C (20 °F) above the global average for the latitude. This led to a landscape that was long dominated by temperate rainforest, although human activity has since cleared the vast majority of forest cover. The region was re-inhabited after the last glacial period of Quaternary glaciation, by 12,000 BC, when Great Britain was still part of a peninsula of the European continent. Ireland was only connected to Great Britain by way of an ice bridge ending by 14,000 BC, and was not inhabited until after 8000 BC.[13] Great Britain became an island by 7000 BC with the flooding of Doggerland.[14]`,
+        id: 1,
+    },
+    {
+        text: `Classes at Hampden–Sydney began in temporary wooden structures on November 10, 1775, on the eve of American Independence, moving into its three-story brick building early in 1776. The college has been in continuous operation since that date, operating under the British, Confederate, and United States flags. In fact, classes have only been canceled Six times: for a Civil War skirmish on campus, for a hurricane that knocked a tree into a dormitory building, twice due to snowstorms,once for an outbreak of norovirus, and once for a horrible ice storm in 2021 leaving the campus without power. Since the college was founded before the proclamation of the Declaration of Independence on July 4, 1776, it was eligible for an official coat of arms and armorial bearings from the College of Arms of the Royal Household of the United Kingdom. Through gifts from the F. M. Kirby Foundation, Professor John Brinkley ('59), in whose honor the "achievement of arms" was given, liaised with Mr. John Brooke-Little, then the Richmond Herald, in designing the arms for the college. The Latin text of the "letters patent" conferring the arms is dated July 4, 1976; Mr. Brooke-Little—who with the Queen's special permission appeared in full herald's uniform—made the presentation on Yorktown Day, October 19, 1976, at the college.[7]
+"The Birthplace" (circa 1750) — outbuilding in which H–SC was founded at Slate Hill Plantation.
+Despite the difficult and financially strapped first years resulting from the Revolutionary War, the college survived with sufficient viability to be granted a charter by the Virginia General Assembly in 1783—the oldest private charter in the South. Patrick`,
+        id: 2,
+    },
+    {
+        text: `
+REMIXING A CLASSIC
+So how did the classical Latin become so incoherent? According to McClintock, a 15th century typesetter likely scrambled part of Cicero's De Finibus in order to provide placeholder text to mockup various fonts for a type specimen book.
+It's difficult to find examples of lorem ipsum in use before Letraset made it popular as a dummy text in the 1960s, although McClintock says he remembers coming across the lorem ipsum passage in a book of old metal type samples. So far he hasn't relocated where he once saw the passage, but the popularity of Cicero in the 15th century supports the theory that the filler text has been used for centuries.
+And anyways, as Cecil Adams reasoned, “[Do you really] think graphic arts supply houses were hiring classics scholars in the 1960s?” Perhaps. But it seems reasonable to imagine that there was a version in use far before the age of Letraset.
+McClintock wrote to Before & After to explain his discovery;
+“What I find remarkable is that this text has been the industry's standard dummy text ever since some printer in the 1500s took a galley of type and scrambled it to make a type specimen book; it has survived not only four centuries of letter-by-letter resetting but even the leap into electronic typesetting, essentially unchanged except for an occasional 'ing' or 'y' thrown in. It's ironic that when the then-understood Latin was scrambled, it became as incomprehensible as Greek; the phrase 'it's Greek to me' and 'greeking' have common semantic roots!” (The editors published his letter in a correction headlined “Lorem Oopsum”).
+As an alternative theory, (and because Latin scholars do this sort of thing) someone tracked down a 1914 Latin edition of De Finibus which challenges McClintock's 15th century claims and suggests that the dawn of lorem ipsum was as recent as the 20th century. The 1914 Loeb Classical Library Edition ran out of room on page 34 for the Latin phrase “dolorem ipsum” (sorrow in itself). Thus, the truncated phrase leaves one page dangling with “do-”, while another begins with the now ubiquitous “lorem ipsum”.
+Whether a medieval typesetter chose to garble a well-known (but non-Biblical—that would have been sacrilegious) text, or whether a quirk in the 1914 Loeb Edition inspired a graphic designer, it's admittedly an odd way for Cicero to sail into the 21st century.
+
+`,
+        id: 3,
+    },
+];
+
+export default proposals

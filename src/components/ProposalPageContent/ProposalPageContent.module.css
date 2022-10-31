@@ -12,9 +12,25 @@
     border-bottom: 1px dashed #860303;
     padding-bottom: 2rem;
     margin-bottom: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   flex-wrap: wrap;
+    gap: 2rem;
 }
 
+.experimentsListHeader input{
+    flex: 1 1 20rem;
+    border:  1px solid #c7c7c9;
+    color: #777;
+    padding: 1rem;
+    border-radius: 10px;
+    font-size: 1.6rem;
+}
+
+
 .experimentsListHeader h1 {
+    flex: 1 1 20rem;
     font-size: 2.4rem;
     color: #000;
 }
