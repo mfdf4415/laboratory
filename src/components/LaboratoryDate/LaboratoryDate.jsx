@@ -5,23 +5,30 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { getListOfSpecificLabs } from "../../Services/getListOfSpecificLabs";
 import { timeStampEcope } from "../../utils/timeStampEcope";
+import Loading from "../common/Loading/Loading";
 
 const default_reserve_hours = [8, 9, 10, 11, 12, 13, 14, 15];
 
 const LaboratoryDate = () => {
   const [specific, setSpecific] = useState([]);
-  const [error, setError] = useState();
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   const params = useParams();
 
   useEffect(() => {
     const fetchLabs = async () => {
+      setLoading(true);
       try {
         const { data } = await getListOfSpecificLabs(params.id);
         setSpecific(data.data);
+        setLoading(false);
+        console.log(data);
       } catch (err) {
         const { data } = err.response;
         setError(data);
+        setLoading(false);
+        console.log(err);
       }
     };
     fetchLabs();
@@ -29,7 +36,7 @@ const LaboratoryDate = () => {
 
   const handelNavigate = (date, startHour) => {
     const newDate = new Date(date.setMinutes(0));
-    const finalDate = new Date(newDate.setSeconds(3))
+    const finalDate = new Date(newDate.setSeconds(3));
     navigate(`/reservation/${params.id}/reserv`, {
       state: {
         start_at: timeStampEcope(finalDate.setHours(startHour)),
@@ -87,40 +94,36 @@ const LaboratoryDate = () => {
     ));
   };
 
-  // const renderDates = () => {
-  //   let renderd;
+  const renderDates = () => {
+    let renderd;
 
-  //   if (!specific && !error) {
-  //     renderd = (
-  //       <div className={style.alertContainer}>
-  //         <p className={style.loading}>loadding ...</p>;
-  //       </div>
-  //     );
-  //   }
+    if (loading && !error) {
+      renderd = <Loading />;
+    }
 
-  //   if (error) {
-  //     renderd = (
-  //       <div className={style.alertContainer}>
-  //         <p className={style.error}>
-  //           error : {error.message.code}
-  //           <br />
-  //           {error.message.text}
-  //         </p>
-  //       </div>
-  //     );
-  //   }
-  //   if (specific && !error) {
-  //     renderd = renderDate();
-  //   }
-  //   return renderd;
-  // };
+    if (error) {
+      renderd = (
+        <div className={style.alertContainer}>
+          <p className={style.error}>
+            error : {error.message.code}
+            <br />
+            {error.message.text}
+          </p>
+        </div>
+      );
+    }
+    if (specific && !error) {
+      renderd = renderDate();
+    }
+    return renderd;
+  };
 
   return (
     <section className={style.laboratorysDateContainer}>
       <div className={style.listTitle}>
         <p>pleas select date and time</p>
       </div>
-      <div className={style.laboratorysDate}>{renderDate()}</div>
+      <div className={style.laboratorysDate}>{renderDates()}</div>
     </section>
   );
 };
