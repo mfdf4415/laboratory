@@ -1,0 +1,69 @@
+.homeSection {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: justify;
+    flex-direction: column;
+    padding: 4rem;
+}
+
+.experimentsListHeader {
+    width: 100%;
+    border-bottom: 1px dashed #860303;
+    padding-bottom: 2rem;
+    margin-bottom: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.experimentsListHeader input{
+    flex: 1 1 20rem;
+    border:  1px solid #c7c7c9;
+    color: #777;
+    padding: 1rem;
+    border-radius: 10px;
+    font-size: 1.6rem;
+}
+
+
+.experimentsListHeader h1 {
+    flex: 1 1 20rem;
+    font-size: 2.4rem;
+    color: #000;
+}
+
+.homeSection div {
+    width: 100%;
+}
+
+.homeSection article {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.homeSection article p {
+    color: #000;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    cursor: pointer;
+}
+
+article hr {
+    width: 100%;
+    height: 1px;
+    background: #e7e7e9;
+}
+
+@media only screen and (max-width: 740px) {
+    .homeSection {
+        padding: 6rem 4rem;
+    }
+}

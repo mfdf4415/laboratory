@@ -1,0 +1,41 @@
+.formContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 3rem 30rem;
+    gap: 4rem;
+    position: relative;
+}
+
+@media only screen and (max-width: 1200px) {
+
+    .formContainer {
+        padding: 3rem 20rem;
+
+    }
+}
+
+@media only screen and (max-width: 980px) {
+
+    .formContainer {
+        padding: 3rem 10rem;
+
+    }
+}
+@media only screen and (max-width: 711px) {
+
+    .formContainer {
+        padding: 3rem 6rem;
+
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    .formContainer {
+        padding: 3rem;
+
+    }
+}

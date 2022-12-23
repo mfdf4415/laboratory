@@ -1,0 +1,134 @@
+.experimentList {
+    width: 100%;
+    padding: 3rem 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;
+}
+
+.experimentListHeader {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px dashed #860303;
+    padding-bottom: 2rem;
+}
+
+.experimentListHeader a svg {
+    font-size: 4rem;
+    color: #860303;
+}
+
+.experimentListHeader h1 {
+    font-size: 2.4rem;
+    color: #000;
+}
+
+.alertContainer {
+    padding: 10rem 15rem;
+    width: 100%;
+
+}
+
+.loading {
+    color: #555;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.error {
+    font-size: 1.8rem;
+    color: red;
+    text-align: center;
+    background: rgb(255, 240, 240);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid red;
+    line-height: 3rem;
+
+}
+
+.experimentRow {
+    width: 100%;
+    background: #e7e7e9;
+    height: 13rem;
+    border-radius: 10px;
+    padding: 2rem;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 5;
+}
+
+.experimentSuperView {
+    width: 100%;
+    background: #e7e7e9;
+    line-height: 2.7rem;
+    border-radius: 10px;
+    padding: 3rem;
+    font-size: 1.4rem;
+}
+
+.experimentRowTop {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.experimentRowTop h3 {
+    font-size: 1.7rem;
+    color: #000;
+    font-weight: 600;
+}
+
+.experimentRowTop svg {
+    font-size: 2.6rem;
+    color: #555;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+}
+.experimentRowTop svg:hover {
+    color: #000;
+}
+
+.experimentRow p {
+    color: #000;
+    font-size: 1.4rem;
+    margin-top: .7rem;
+    line-height: 2.5rem;
+}
+
+
+
+@media only screen and (max-width: 1040px) {
+
+    .experimentList {
+        padding: 3rem 8rem;
+
+    }
+}
+
+
+@media only screen and (max-width: 740px) {
+
+    .experimentList {
+        padding: 6rem 4rem;
+
+    }
+}
+
+
+
+@media only screen and (max-width: 550px) {
+
+    .experimentList {
+        padding: 6rem 2rem;
+
+    }
+}

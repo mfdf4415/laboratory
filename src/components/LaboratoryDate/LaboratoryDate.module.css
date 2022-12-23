@@ -1,0 +1,152 @@
+.laboratorysDateContainer {
+    width: 100%;
+    padding: 3rem 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.listTitle {
+    width: 100%;
+    justify-self: flex-start;
+
+}
+
+.listTitle p {
+    font-size: 2rem;
+    color: #000;
+}
+
+.alertContainer {
+    padding: 10rem 15rem;
+    width: 100%;
+
+}
+
+.loading {
+    color: #555;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.error {
+    font-size: 1.8rem;
+    color: red;
+    text-align: center;
+    background: rgb(255, 240, 240);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid red;
+    line-height: 3rem;
+
+}
+
+
+.laboratorysDate {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.laboratorysDateItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+.date {
+    width: 100%;
+    border: 1px solid #BEBABA;
+    font-size: 2rem;
+    color: #000;
+    font-weight: 600;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 10px;
+    text-transform: capitalize;
+}
+
+.times {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .5rem;
+    flex-wrap: wrap;
+}
+
+.times button {
+    background: #E2F5F8;
+    border: 1px solid #BEBABA;
+    border-radius: 10px;
+    font-size: 1.6rem;
+    color: #000;
+    padding: 1.3rem 2rem;
+    cursor: pointer;
+    flex: 1 8rem;
+    text-align: center;
+}
+
+/* .disabled {
+    background: red !important;
+    border: 1px solid #BEBABA;
+    border-radius: 10px;
+    font-size: 1.6rem;
+    color: #000;
+    padding: 1.3rem 2rem;
+    cursor: pointer;
+    flex: 1 8rem;
+    text-align: center;
+} */
+
+.times button:disabled {
+    opacity: .3;
+    background-color: red;
+    cursor: not-allowed;
+}
+
+@media only screen and (max-width: 1200px) {
+    .laboratorysDateContainer {
+        padding: 3rem 9rem;
+    }
+}
+
+@media only screen and (max-width: 1164px) {
+    .laboratorysDateContainer {
+        padding: 3rem 8rem;
+    }
+
+    .times span {
+        padding: 1.3rem 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 1110px) {
+    .laboratorysDateContainer {
+        padding: 3rem 5rem;
+    }
+
+    .times span {
+        padding: 1.3rem 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 1035px) {
+    .laboratorysDateContainer {
+        padding: 3rem;
+    }
+
+    .times span {
+        padding: 1.3rem 1.5rem;
+    }
+}
+
+

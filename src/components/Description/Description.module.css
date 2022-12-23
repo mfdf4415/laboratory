@@ -1,0 +1,133 @@
+.descriptionContainer {
+    width: 100%;
+    padding: 3rem 15rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+
+.descriptionHeader {
+    border-bottom: 1px dashed #860303;
+    width: 100%;
+    padding-bottom: 2rem;
+}
+
+.descriptionHeader h1 {
+    font-size: 2.4rem;
+    color: #000;
+}
+
+.descriptionContainer form {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+}
+
+.formRowDesc {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    background: #E7E7E9;
+    border-radius: 10px;
+    padding: 2rem;
+    gap: 1rem;
+}
+
+.formRowDesc label {
+    color: #000;
+    font-size: 1.6rem;
+}
+
+.formRowDesc textarea,
+.formRowDesc input {
+    width: 100%;
+    border-radius: 10px;
+    font-size: 1.6rem;
+    color: #000;
+    padding: 1rem;
+}
+
+
+.formRowDesc input {
+    padding: 1.5rem;
+}
+
+
+.labelContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.labelContainer .error {
+    color: #860303;
+    font-size: 1.3rem;
+}
+
+.formRowImg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10rem;
+    padding: 0 5rem;
+    width: 100%;
+}
+
+.imgContainer {
+    flex: 1 1 25rem;
+    border: 1px dashed #C0C0C0;
+    border-radius: 10px;
+    width: 100%;
+    height: 23rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 7;
+}
+
+.imgContainer svg {
+    font-size: 8rem;
+    color: #E7E7E9;
+    cursor: pointer;
+}
+
+.imgContainer img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+
+.descriptionContainer form button {
+    background: #A73730;
+    border-radius: 10px;
+    color: #FFFFFF;
+    font-size: 2rem;
+    width: 40%;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1090px) {
+    .descriptionContainer {
+        padding: 6rem 3rem;
+    }
+
+    .formRowImg {
+        gap: 5rem;
+    }
+}

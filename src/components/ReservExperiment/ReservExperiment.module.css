@@ -1,0 +1,125 @@
+.resrvContainer {
+    width: 100%;
+    padding: 3rem 15rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+}
+
+.reservForm {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 2.5rem;
+}
+
+.formRow {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+}
+
+.formRowCheckBox {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 1rem;
+}
+
+.formRowCheckBox input {
+    width: 2rem;
+    height: 2rem;
+    background: #4B4D50;
+}
+
+.labelContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #A73730;
+    font-size: 1.4rem;
+}
+
+.formRow label,
+.labelContainer label,
+.formRowCheckBox label,
+.formRowFile p {
+    font-size: 14px;
+    color: #000;
+}
+
+.formRow input,
+.formRow textarea,
+.formRow select {
+    border: 1px solid #E0E2EA;
+    border-radius: 10px;
+    padding: 1.3rem 1rem;
+    width: 100%;
+    font-size: 1.4rem;
+}
+
+.formRow select {
+    line-height: 1;
+    background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right ;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background-position-x: 98%;
+}
+
+.formRowFile {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    background: #E7E7E9;
+    border-radius: 10px;
+    padding: 2rem;
+    gap: 4rem;
+}
+
+.pdf {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.pdf a {
+    font-size: 1.7rem;
+    color: #000;
+    text-align: center;
+}
+
+.pdf a svg {
+    font-size: 4rem;
+}
+
+.btn {
+    background: #A73730;
+    border-radius: 10px;
+    width: 100%;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #fff;
+    padding: 1rem;
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 740px) {
+
+    .resrvContainer {
+        padding: 4rem;
+
+    }
+}

@@ -1,0 +1,60 @@
+.homeSection {
+    width: 100%;
+    display: flex;
+    padding: 4rem;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    text-align: justify;
+    gap: 2rem;
+    position: relative;
+}
+
+.experimentsListHeader {
+    width: 100%;
+    border-bottom: 1px dashed #860303;
+    padding-bottom: 2rem;
+    margin-bottom: 4rem;
+}
+
+.experimentsListHeader h1 {
+    font-size: 2.4rem;
+    color: #000;
+}
+
+.homeSection article {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.homeSection article p {
+    color: #000;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    width: 100%;
+    flex: 1 1 35rem;
+}
+
+.homeSection article p a {
+    font-size: 1.6rem;
+    margin-top: 1rem;
+    display: block;
+    color: #000;
+}
+
+.homeSection article img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    flex: 1 1 25rem;
+}
+
+@media only screen and (max-width: 740px) {
+    .homeSection {
+        padding: 6rem 4rem;
+    }
+}

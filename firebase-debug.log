@@ -1,0 +1,15 @@
+[debug] [2022-12-21T20:46:33.290Z] ----------------------------------------------------------------------
+[debug] [2022-12-21T20:46:33.291Z] Command:       /usr/local/Cellar/node/16.10.0/bin/node /usr/local/bin/firebase deploy
+[debug] [2022-12-21T20:46:33.292Z] CLI Version:   11.14.2
+[debug] [2022-12-21T20:46:33.292Z] Platform:      darwin
+[debug] [2022-12-21T20:46:33.292Z] Node Version:  v16.10.0
+[debug] [2022-12-21T20:46:33.293Z] Time:          Thu Dec 22 2022 00:16:33 GMT+0330 (Iran Standard Time)
+[debug] [2022-12-21T20:46:33.293Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-12-21T20:46:33.354Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-12-21T20:46:33.355Z] > authorizing via signed-in user (srgcm4415@gmail.com)
+[debug] [2022-12-21T20:46:33.355Z] [iam] checking project labratoary-germany-test for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-12-21T20:46:33.357Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/labratoary-germany-test:testIamPermissions [none]
+[debug] [2022-12-21T20:46:33.357Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/labratoary-germany-test:testIamPermissions x-goog-quota-user=projects/labratoary-germany-test
+[debug] [2022-12-21T20:46:33.357Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/labratoary-germany-test:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+werwrtwet

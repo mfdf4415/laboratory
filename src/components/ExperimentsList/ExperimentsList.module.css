@@ -1,0 +1,131 @@
+.experimentsList {
+    width: 100%;
+    padding: 3rem 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    opacity: 4;
+    position: relative;
+}
+
+.experimentsListHeader {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px dashed #860303;
+    padding-bottom: 2rem;
+}
+
+.experimentsListHeader a svg {
+    font-size: 4rem;
+    color: #860303;
+}
+
+.experimentsListHeader h1 {
+    font-size: 2.4rem;
+    color: #000;
+}
+
+.alertContainer {
+    padding: 10rem 15rem;
+    width: 100%;
+
+}
+
+.loading {
+    color: #555;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.error {
+    font-size: 1.8rem;
+    color: red;
+    text-align: center;
+    background: rgb(255, 240, 240);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid red;
+    line-height: 3rem;
+
+}
+
+.experiments {
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.experiment {
+    width: 100%;
+    padding: 3rem 7rem;
+    border: 1px solid #777272;
+    border-radius: 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    cursor: pointer;
+}
+
+.experiment h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #000;
+}
+
+.experiment h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #000;
+    cursor: pointer;
+}
+
+.experimentBottom {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.experimentBottom p {
+    background: #ddd;
+    border-radius: 3px;
+    font-size: 1.1rem;
+    color: #000;
+    padding: .5rem;
+}
+
+.experimentBottom svg {
+    font-size: 4rem;
+    cursor: pointer;
+    color: #ccc;
+}
+
+.experimentBottom svg:hover {
+    color: #000;
+}
+
+@media only screen and (max-width: 950px) {
+
+    .experimentsList {
+        padding: 4rem;
+
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    .experiment {
+        padding: 2rem;
+
+    }
+}
