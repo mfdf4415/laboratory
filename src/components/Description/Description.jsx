@@ -6,6 +6,8 @@ import { saveNewExperiment } from "../../Services/saveNewExperiment";
 import { useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import Loading from "../common/Loading/Loading";
+import { formatImgSize } from "../../utils/formatImgSIze";
+import { AiOutlineCloudUpload } from "react-icons/ai";
 
 const initialValues = {
   name: "",
@@ -98,11 +100,21 @@ const Description = () => {
             <div className={style.formRowImg}>
               <div className={style.imgContainer}>
                 <input type="file" onChange={(e) => uploadImgHandler(e)} />
-                {images[0] && <img src={URL.createObjectURL(images[0])} alt="Experiment Bild" />}
+                {images[0] && (
+                  <img
+                    src={URL.createObjectURL(images[0])}
+                    alt="Experiment Bild"
+                  />
+                )}
               </div>
               <div className={style.imgContainer}>
                 <input type="file" onChange={(e) => uploadImgHandler(e)} />
-                {images[1] && <img src={URL.createObjectURL(images[1])} alt="Experiment Bild" />}
+                {images[1] && (
+                  <img
+                    src={URL.createObjectURL(images[1])}
+                    alt="Experiment Bild"
+                  />
+                )}
               </div>
             </div>
             <button type="submit">Senden</button>
@@ -110,7 +122,6 @@ const Description = () => {
         </>
       ) : (
         <>
-          {" "}
           <div className={style.descriptionHeader}>
             <h1>Beschreibung</h1>
           </div>
@@ -147,13 +158,49 @@ const Description = () => {
               ></textarea>
             </div>
             <div className={style.formRowImg}>
-              <div className={style.imgContainer}>
-                <input type="file" onChange={(e) => uploadImgHandler(e)} />
-                {images[0] && <img src={URL.createObjectURL(images[0])} alt="Experiment Bild"/> }
+              <div className={style.formRowImgItem}>
+                <div className={style.imgContainer}>
+                  <label htmlFor="image0">
+                    <AiOutlineCloudUpload />
+                    <input
+                      type="file"
+                      hidden
+                      id="image0"
+                      onChange={(e) => uploadImgHandler(e)}
+                    />
+                  </label>
+                  {images[0] && (
+                    <img
+                      src={URL.createObjectURL(images[0])}
+                      alt="Experiment Bild"
+                    />
+                  )}
+                </div>
+                <p>
+                  {images[0] ? formatImgSize(images[0].size) : "No file choose"}
+                </p>
               </div>
-              <div className={style.imgContainer}>
-                <input type="file" onChange={(e) => uploadImgHandler(e)} />
-                {images[1] && <img src={URL.createObjectURL(images[1])} alt="Experiment Bild"/> }
+              <div className={style.formRowImgItem}>
+                <div className={style.imgContainer}>
+                  <label htmlFor="image1">
+                    <AiOutlineCloudUpload />
+                    <input
+                      hidden
+                      id="image1"
+                      type="file"
+                      onChange={(e) => uploadImgHandler(e)}
+                    />
+                  </label>
+                  {images[1] && (
+                    <img
+                      src={URL.createObjectURL(images[1])}
+                      alt="Experiment Bild"
+                    />
+                  )}
+                </div>
+                <p>
+                  {images[1] ? formatImgSize(images[1].size) : "No file choose"}
+                </p>
               </div>
             </div>
             <button type="Submit">Senden</button>

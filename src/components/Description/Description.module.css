@@ -83,8 +83,22 @@
     width: 100%;
 }
 
-.imgContainer {
+.formRowImgItem {
+    width: 100%;
     flex: 1 1 25rem;
+    z-index: 7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.formRowImgItem p {
+    font-size: 1.1rem;
+}
+
+.imgContainer {
     border: 1px dashed #C0C0C0;
     border-radius: 10px;
     width: 100%;
@@ -94,12 +108,11 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    z-index: 7;
 }
 
 .imgContainer svg {
     font-size: 8rem;
-    color: #E7E7E9;
+    color: #C0C0C0;
     cursor: pointer;
 }
 
