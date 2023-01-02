@@ -23,8 +23,6 @@ const validationSchema = yup.object({
 });
 
 
-const options = [{name: "Yes", value: "1"}, {name: "No", value: "0"},];
-
 const ReservExpriment = () => {
     const params = useParams();
     const navigate = useNavigate();
