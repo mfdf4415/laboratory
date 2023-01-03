@@ -24,7 +24,6 @@ const LaboratoryDate = () => {
         const { data } = await getListOfSpecificLabs(params.id);
         setSpecific(data.data);
         setLoading(false);
-        console.log(data);
       } catch (err) {
         const { data } = err.response;
         setError(data);

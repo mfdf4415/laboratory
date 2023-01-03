@@ -101,7 +101,7 @@ const Description = () => {
               <div className={style.formRowImgItem}>
                 <div className={style.imgContainer}>
                   <label htmlFor="image0">
-                    choose photo
+                    Wähle ein Foto aus
                     <input
                       type="file"
                       hidden
@@ -117,13 +117,13 @@ const Description = () => {
                   )}
                 </div>
                 <p>
-                  {images[0] ? formatImgSize(images[0].size) : "No file choose"}
+                  {images[0] ? formatImgSize(images[0].size) : "Keine Datei ausgewählt"}
                 </p>
               </div>
               <div className={style.formRowImgItem}>
                 <div className={style.imgContainer}>
                   <label htmlFor="image1">
-                    choose photo
+                    Wähle ein Foto aus
                     <input
                       hidden
                       id="image1"
@@ -139,7 +139,7 @@ const Description = () => {
                   )}
                 </div>
                 <p>
-                  {images[1] ? formatImgSize(images[1].size) : "No file choose"}
+                  {images[1] ? formatImgSize(images[1].size) : "Keine Datei ausgewählt"}
                 </p>
               </div>
             </div>
@@ -187,7 +187,7 @@ const Description = () => {
               <div className={style.formRowImgItem}>
                 <div className={style.imgContainer}>
                   <label htmlFor="image0">
-                    choose photo
+                    Wähle ein Foto aus
                     <input
                       type="file"
                       hidden
@@ -203,13 +203,13 @@ const Description = () => {
                   )}
                 </div>
                 <p>
-                  {images[0] ? formatImgSize(images[0].size) : "No file choose"}
+                  {images[0] ? formatImgSize(images[0].size) : "Keine Datei ausgewählt"}
                 </p>
               </div>
               <div className={style.formRowImgItem}>
                 <div className={style.imgContainer}>
                   <label htmlFor="image1">
-                    choose photo
+                    Wähle ein Foto aus
                     <input
                       hidden
                       id="image1"
@@ -225,7 +225,7 @@ const Description = () => {
                   )}
                 </div>
                 <p>
-                  {images[1] ? formatImgSize(images[1].size) : "No file choose"}
+                  {images[1] ? formatImgSize(images[1].size) : "Keine Datei ausgewählt"}
                 </p>
               </div>
             </div>
