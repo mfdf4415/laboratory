@@ -101,7 +101,7 @@ const Description = () => {
               <div className={style.formRowImgItem}>
                 <div className={style.imgContainer}>
                   <label htmlFor="image0">
-                    <AiOutlineCloudUpload />
+                    choose photo
                     <input
                       type="file"
                       hidden
@@ -123,7 +123,7 @@ const Description = () => {
               <div className={style.formRowImgItem}>
                 <div className={style.imgContainer}>
                   <label htmlFor="image1">
-                    <AiOutlineCloudUpload />
+                    choose photo
                     <input
                       hidden
                       id="image1"
@@ -187,7 +187,7 @@ const Description = () => {
               <div className={style.formRowImgItem}>
                 <div className={style.imgContainer}>
                   <label htmlFor="image0">
-                    <AiOutlineCloudUpload />
+                    choose photo
                     <input
                       type="file"
                       hidden
@@ -209,7 +209,7 @@ const Description = () => {
               <div className={style.formRowImgItem}>
                 <div className={style.imgContainer}>
                   <label htmlFor="image1">
-                    <AiOutlineCloudUpload />
+                    choose photo
                     <input
                       hidden
                       id="image1"

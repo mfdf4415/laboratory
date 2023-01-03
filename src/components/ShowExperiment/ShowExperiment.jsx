@@ -6,11 +6,16 @@ import { getShowExperiment } from "../../Services/showExperiment";
 import { getImageServices } from "../../Services/getImagesServices";
 import { Buffer } from "buffer";
 import Loading from "../common/Loading/Loading";
+import ShowImage from "../ShowImage/ShowImage";
 
 const ShowExperiment = () => {
   const [showExperiment, setShowExperiment] = useState(null);
   const [error, setError] = useState(null);
   const [images, setImages] = useState({ image1: "", image2: "" });
+  const [imgContainer, setImgContainer] = useState({
+    isShow: false,
+    src: "",
+  });
   const params = useParams();
 
   useEffect(() => {
@@ -58,6 +63,13 @@ const ShowExperiment = () => {
     setImages({ image1, image2 });
   };
 
+  const setShowHandler = () => {
+    setImgContainer({
+      isShow: false,
+      srs: "",
+    });
+  };
+
   const renderShowExperiment = () => {
     let renderd;
 
@@ -84,6 +96,7 @@ const ShowExperiment = () => {
     if (showExperiment && showExperiment.data && !error) {
       renderd = (
         <div className={style.showExperimentContainer}>
+            <ShowImage img={imgContainer.src} show={imgContainer.isShow} setShow={setShowHandler} />
           <div className={style.showTop}>
             <h3>{showExperiment.data.experiment.name}</h3>
             <p>{showExperiment.data.experiment.dascription}</p>
@@ -91,12 +104,22 @@ const ShowExperiment = () => {
           <div className={style.showImg}>
             {images.image1 && (
               <div className={style.imgContainer}>
-                <img src={images.image1} />
+                <img
+                  src={images.image1}
+                  onClick={() =>
+                    setImgContainer({ isShow: true, src: images.image1 })
+                  }
+                />
               </div>
             )}
             {images.image2 && (
               <div className={style.imgContainer}>
-                <img src={images.image2} />
+                <img
+                  src={images.image2}
+                  onClick={() =>
+                    setImgContainer({ isShow: true, src: images.image2 })
+                  }
+                />
               </div>
             )}
           </div>

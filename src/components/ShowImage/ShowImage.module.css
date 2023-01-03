@@ -1,0 +1,69 @@
+.hideImgContainer {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 100%;
+    min-height: 92vh;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px);
+    z-index: 8;
+}
+
+.showImgContainer {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    min-height: 92vh;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    z-index: 8;
+    padding: 5%;
+}
+
+.showImgContainer svg {
+    font-size: 4rem;
+    color: #444;
+    align-self: flex-end;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+.showImgBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.showImgBox img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+@media only screen and (max-width: 990px) {
+    .showImgBox {
+        width: 65%;
+    }
+}
+@media only screen and (max-width: 650px) {
+    .showImgBox {
+        width: 75%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .showImgBox {
+        width: 100%;
+    }
+}

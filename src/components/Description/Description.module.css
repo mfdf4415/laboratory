@@ -110,10 +110,13 @@
     overflow: hidden;
 }
 
-.imgContainer svg {
-    font-size: 8rem;
-    color: #C0C0C0;
+.imgContainer label {
+    font-size: 1.2rem;
+    color: #000;
     cursor: pointer;
+    background: #E7E7E9;
+    padding: 1rem;
+    border-radius: 6px;
 }
 
 .imgContainer img {
